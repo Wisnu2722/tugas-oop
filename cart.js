@@ -1,5 +1,5 @@
 import formatCurrency from "./helper.js"
-import Table  from "cli-table3"
+import Table from "cli-table3"
 
 export default class Cart {
 
@@ -22,14 +22,13 @@ export default class Cart {
         }
 
         console.log('\n')
-        console.log('Item successfuly deleted')
+        console.log('Item successfuly removed from cart')
         this.viewCart()
-        
+
     }
 
     viewCart() {
 
-        
         console.log(`Cart ID: ${this.cartId}`)
         const allItems = this.items
         let subTotal
@@ -47,17 +46,16 @@ export default class Cart {
                 { content: product_name },
                 { content: `${formatCurrency(element['product']['price'])}` },
                 { content: element.qty },
-                { content: subTotal },
+                { content: formatCurrency(subTotal) },
             ])
-
-            // console.log(`price: ${formatCurrency(element['product']['price'])}`)
-            // console.log(`qty: ${element.qty}`)
-            // console.log(`sub total: ${formatCurrency(subTotal)}`)
             total += subTotal
         });
+        productInCart.push([
+            { hAlign: 'center', colSpan: 3, content: 'Total' },
+            { content: formatCurrency(total) },
+        ])
 
         console.log(productInCart.toString())
-        console.log(`Total: ${formatCurrency(total)}`)
         console.log('\n')
 
     }
