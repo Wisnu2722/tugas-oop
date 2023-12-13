@@ -20,6 +20,7 @@ export default class Category {
 
     updateCategory(newCategoryName) {
         this.categoryName = newCategoryName
+        console.log('\n')
         console.log(`Category name has been updated to: ${this.categoryName}`)
     }
 
@@ -30,7 +31,6 @@ export default class Category {
             style: { head: [], border: [] }
         });
 
-        console.log('\n')
         console.log(`Products in ${this.categoryName} category `)
 
         productArray.forEach(element => {
@@ -42,5 +42,6 @@ export default class Category {
         });
 
         console.log(productTable.toString())
+        console.log('\n')
     }
 }
