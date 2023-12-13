@@ -2,7 +2,7 @@
 import Category from './category.js'
 import Product from './product.js'
 import Cart from './cart.js';
-import Order from './order.js';
+// import Order from './order.js';
 
 
 
@@ -49,4 +49,11 @@ Electronics.productList()
 Laptop.productList()
 Mobile.productList()
 
-// console.log(typeof(rog.displayInfo()))
+// instance new cart object
+const cart1 = new Cart('Crt-001')
+
+cart1.addItem(rog, 1)
+cart1.addItem(samsungS23, 3)
+cart1.addItem(corsair, 2)
+
+cart1.viewCart()
