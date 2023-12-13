@@ -52,8 +52,13 @@ Mobile.productList()
 // instance new cart object
 const cart1 = new Cart('Crt-001')
 
+// added items into cart
 cart1.addItem(rog, 1)
 cart1.addItem(samsungS23, 3)
 cart1.addItem(corsair, 2)
 
+// display cart items
 cart1.viewCart()
+
+// remove item from cart
+cart1.removeItem(corsair)
