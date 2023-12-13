@@ -2,6 +2,7 @@
 import Category from './category.js'
 import Product from './product.js'
 import Cart from './cart.js';
+import Order from './order.js';
 // import Order from './order.js';
 
 
@@ -50,7 +51,7 @@ Laptop.productList()
 Mobile.productList()
 
 // instance new cart object
-const cart1 = new Cart('Crt-001')
+const cart1 = new Cart('CRT-001')
 
 // added items into cart
 cart1.addItem(rog, 1)
@@ -62,3 +63,10 @@ cart1.viewCart()
 
 // remove item from cart
 cart1.removeItem(corsair)
+
+
+// instance object order
+const order1 = new Order('ORD-001')
+
+order1.createOrder(cart1)
+order1.displayOrderDetail()
