@@ -13,6 +13,7 @@ export default class Product {
     }
 
     displayInfo() {
+        console.log('\n')
         console.log(`Product ID: ${this.productId}`)
         console.log(`Product Name: ${this.productName}`)
         console.log(`Price: ${formatCurrency(this.price)}`)
@@ -25,10 +26,12 @@ export default class Product {
         this.price = newPrice
         this.description = newDescription
 
-        console.log("product has been updated")
+        console.log('\n')
+        console.log('product has been updated')
         console.log(`Product : ${this.productName}`)
-        console.log(`Price : ${this.price}`)
+        console.log(`Price : ${formatCurrency(this.price)}`)
         console.log(`Desc : ${this.description}`)
+        console.log('\n')
     }
 
     addCategory(categoryName) {
