@@ -1,7 +1,7 @@
 import Table from "cli-table3"
 import formatCurrency from "./helper.js"
 
-export class Category {
+export default class Category {
 
     constructor(CategoryId, categoryName) {
         this.CategoryId = CategoryId
